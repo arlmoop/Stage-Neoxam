@@ -1,0 +1,16 @@
+div.totale { 
+    display: inline;
+}
+
+div.totale p {
+    display: inline;
+    background-color: blue;
+}
+
+p.box-a {
+    margin-right: 20px;
+}
+
+p.box-b {
+    padding-left: 10px;
+}
