@@ -1,0 +1,11 @@
+html {
+    --variable-color: #153c2a;
+}
+
+header {
+    color: var(--variable-color);
+}
+
+footer {
+    color: var(--variable-color);
+}
