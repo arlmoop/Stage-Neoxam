@@ -1,0 +1,25 @@
+div.boxes {
+    display: flex;
+}
+
+div.boxes::before {
+    content: "Desktop : ";
+}
+
+div.boxes p {
+    background-color: blue;
+    padding: 10px;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    div.boxes::before {
+        content: "Mobile : ";
+    }
+
+    div.boxes {
+        flex-direction: column;
+        width: 75.78px;
+        height: 28.5px;
+    }
+}
