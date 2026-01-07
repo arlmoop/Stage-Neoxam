@@ -1,11 +1,20 @@
-html {
-    --variable-color: #153c2a;
+button.special {
+    width: 100px;
+    height: 50px;
+    background-color: #ffcc00;
+    transition: all 1s ease-out;
+}
+button.special:hover {
+    background-color: brown;
+    width: 200px;
+    height: 100px;
 }
 
-header {
-    color: var(--variable-color);
+button.special:active {
+    border: 10px solid black;
 }
 
-footer {
-    color: var(--variable-color);
+p::before {
+    content: "Ajout avec le before : ";
+    color: blue;
 }
