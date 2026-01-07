@@ -1,0 +1,12 @@
+button.special:hover {
+    background-color: brown;
+}
+
+button.special:active {
+    border: 10px solid black;
+}
+
+p::before {
+    content: "Ajout avec le before : ";
+    color: blue;
+}

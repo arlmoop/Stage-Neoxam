@@ -1,0 +1,12 @@
+h1.fix {
+    position: fixed;
+    height: 50px;
+    background-color: blue;
+    z-index:1;
+    top: -22px;
+}
+
+p.content {
+    margin-top: 50px;
+    padding: 10px;
+}
