@@ -94,6 +94,8 @@ div.bloc-1 img.image-background {
     z-index: -1;
     width: 695px;
     height: 1002px;
+
+    border: ;
     
     clip-path: polygon(
         100% 0%,   /* haut droite */
@@ -181,4 +183,13 @@ div.bloc-2 {
     height: 1000px;
     background-color: #F0F0F0;
     z-index: -1;
+}
+
+div.bloc-2 p.text-1 {
+    padding-top: 150px;
+    color: black;
+    font: 36px var(--font-style-2);
+    font-weight: bold;
+    text-align: center;
+
 }
