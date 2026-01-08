@@ -1,0 +1,73 @@
+html {
+    --bg-color: #141413;
+    --bg-color-button: #0ed8b8;
+    --text-color: #FFFFFF;
+
+    --font-style: Inter, sans-serif;
+
+    background-color: var(--bg-color);
+}
+
+div.bar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    margin: 13px 0 0 0;
+    padding: 0 35px;
+
+    max-width: 100%;
+}
+
+div.bar div {
+    display: flex;
+    align-items: center;
+}
+
+div.options p {
+    font: 20px var(--font-style);
+    font-weight: normal;
+    margin: 10px 0px;
+    padding: 0px 25px;
+}
+
+div.options p:hover {
+    color: #D9D9D8;
+    cursor: pointer;
+}
+
+div.contact-us a {
+    text-decoration: none;
+}
+
+div.contact-us a p {
+    font: 16px "Mark Pro Bold", Arial, sans-serif;
+    color: var(--bg-color);
+    background-color: var(--bg-color-button);
+    margin: 10px 0 10px 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+div.contact-us a p:hover {
+    background-color: #2ae2c4;
+    cursor: pointer;
+}
+
+img.search {
+    width: 18px;
+    height: 18px;
+    padding: 0 10px;
+}
+
+img.search:hover {
+    cursor: pointer;
+}
+
+div.image-logo img {
+    width: 218px;
+    height: 44.7px;
+}
