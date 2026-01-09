@@ -269,7 +269,7 @@ div.join-us {
     text-align: left;
     justify-self: start;
     align-items: flex-start;
-    padding: 50px 150px;
+    padding: 50px;
     box-sizing: border-box;
     align-items: flex-start;
 }
@@ -329,7 +329,7 @@ div.newsletter input {
     border-width: 2px;
     color: #ACABAA;
     background-color: black    ;
-    padding: 16px;
+    padding: 20px;
     font-size: 20px;
 }
 
@@ -340,7 +340,7 @@ input:focus {
 }
 
 div.follow-us img {
-    padding: 14px;
-    background-color: #1f2020;
+    padding: 10px;
+    background-color: #232525;
     margin-right: 17px;
 }
