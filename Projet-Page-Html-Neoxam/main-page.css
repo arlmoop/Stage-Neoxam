@@ -272,6 +272,7 @@ div.join-us {
     padding: 50px 150px;
     box-sizing: border-box;
     align-items: flex-start;
+    width: 100%;
 }
 
 #logo-neoxam {
@@ -313,6 +314,9 @@ p.title-newsletter {
     color: white;
 }
 
+div.newsletter {
+    padding-right: 100px;
+}
 
 div.newsletter p.text-1 {
     font: 20px var(--font-style-2);
@@ -328,7 +332,7 @@ div.newsletter input {
     border: 2px solid #ACABAA;
     border-width: 2px;
     color: #ACABAA;
-    background-color: black    ;
+    background-color: black;
     padding: 16px;
     font-size: 20px;
 }
