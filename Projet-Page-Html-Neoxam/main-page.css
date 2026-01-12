@@ -1,0 +1,184 @@
+html {
+    --bg-color: #141413;
+    --color-neoxam: #0ed8b8;
+    --text-color: #FFFFFF;
+
+    --font-style-1: Inter, sans-serif;
+    --font-style-2: "Mark Pro Bold",Arial,sans-serif;
+
+    background-color: var(--bg-color);
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+div.bar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    margin: 13px 0 40px 0;
+    padding: 0 35px;
+
+    max-width: 100%;
+}
+
+div.bar div {
+    display: flex;
+    align-items: center;
+}
+
+div.options p {
+    font: 20px var(--font-style-1);
+    font-weight: normal;
+    margin: 10px 0px;
+    padding: 0px 25px;
+}
+
+div.options p:hover {
+    color: #D9D9D8;
+    cursor: pointer;
+}
+
+a.button-contact-us {
+    text-decoration: none;
+}
+
+a.button-contact-us p {
+    font: 16px var(--font-style-2);
+    color: var(--bg-color);
+    background-color: var(--color-neoxam);
+    margin: 10px 0 10px 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a.button-contact-us p:hover {
+    background-color: #2ae2c4;
+    cursor: pointer;
+}
+
+img.search {
+    width: 18px;
+    height: 18px;
+    padding: 0 10px;
+}
+
+img.search:hover {
+    cursor: pointer;
+}
+
+div.image-logo img {
+    width: 218px;
+    height: 44.7px;
+}
+
+div.bloc-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 900px;
+}
+
+div.bloc-1 img.image-background {
+    position: absolute;
+    right: -100px;
+    top: 250px;
+    z-index: -1;
+    width: 695px;
+    height: 1002px;
+    
+    clip-path: polygon(
+        100% 0%,   /* haut droite */
+        100% 100%, /* bas droite */
+        0% 100%,   /* bas gauche */
+        0% 50%     /* milieu gauche */
+    );
+}
+
+div p.text-1 {
+    color: var(--color-neoxam);
+    font: 18px var(--font-style-1);
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+div p.text-2 {
+    color: white;
+    font: 48px var(--font-style-2);
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+div p.text-3 {
+    color: #D9D9D8;
+    font: 24px var(--font-style-1);
+    letter-spacing: 1.5px;
+    margin: 0;
+}
+
+div.buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+div.button-download {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--color-neoxam);
+    border-radius: 5px;
+    margin: 0 0 0 30px;
+    padding: 0;
+    gap: 0;
+}
+
+div.button-download a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    font: 16px var(--font-style-2);
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 0;
+}
+
+div.button-download:hover {
+    background-color: #2ae2c4;
+    cursor: pointer;
+}
+
+div.button-download img {
+    width: 13px;
+    height: 16.41px;
+    margin: 0 9px 0 0;
+    padding: 0;
+}
+
+div.button-download a p {
+    margin: 0;
+}
+
+img.image-presentation {
+    width: 865.59px;
+    height: 418.7px;
+    border-radius: 20px;
+}
+
+div.bloc-2 {
+    position: relative;
+    top: -80px;
+    height: 1000px;
+    background-color: #F0F0F0;
+    z-index: -1;
+}
