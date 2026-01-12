@@ -9,6 +9,11 @@ html {
     background-color: var(--bg-color);
 }
 
+body {
+    overflow-x: hidden;
+    height: 1000px;
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -90,7 +95,7 @@ div.bloc-1 {
 div.bloc-1 img.image-background {
     position: absolute;
     right: -100px;
-    top: 250px;
+    margin-top: 250px;
     z-index: -1;
     width: 695px;
     height: 1002px;
@@ -173,12 +178,173 @@ img.image-presentation {
     width: 865.59px;
     height: 418.7px;
     border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    z-index: 1;
 }
 
 div.bloc-2 {
     position: relative;
     top: -80px;
-    height: 1000px;
+    height: 780px;
     background-color: #F0F0F0;
     z-index: -1;
+}
+
+div.bloc-2 p.text-1 {
+    padding-top: 150px;
+    color: black;
+    font: 36px var(--font-style-2);
+    font-weight: bold;
+    text-align: center;
+}
+
+div.bloc-2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin: 0 155px;
+    justify-content: center;
+    align-content: center;
+}
+
+div.bloc-2-grid div.case {
+    background-color: white;
+    margin: 8px;
+    border-radius: 20px;
+    width: 400px;
+    height: 190px;
+}
+
+div.case p.grid-title {
+    font: 24px var(--font-style-2);
+    color: var(--color-neoxam);
+    font-weight: 400;
+    padding-top: 3px;
+}
+
+div.case p.grid-text {
+    font: 18px var(--font-style-1);
+    color: #22211F;
+    font-weight: 300;
+    padding: 0 25px 5px 25px;
+}
+
+div.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -180px;
+    height: 200px;
+    padding-top: 100px;
+}
+
+div.footer img.bg-banniere-footer {
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* ✅ remplit sans déformer */
+}
+
+div.footer p.get-started {
+    font: 42px var(--font-style-2);
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+div.footer a.button-contact-us {
+    margin-bottom: 30px;
+    font-weight: bold;
+
+}
+
+div.join-us {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-self: start;
+    align-items: flex-start;
+    padding: 50px 150px;
+    box-sizing: border-box;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#logo-neoxam {
+    width: 90px;
+    height: 90px;
+    padding-right: 70px;
+}
+
+div.newsletter {
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px;
+}
+
+p.title-newsletter {
+    font: 20px var(--font-style-2);
+    color: #ACABAA;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#privacy-policy, #text-2, #text-3 {
+    display: inline;
+}
+
+#text-2, #text-3 {
+    font: 14px var(--font-style-1);
+    color: #ACABAA;
+    margin-top: 20px;
+}
+
+#text-3 {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#text-3:hover {
+    color: white;
+}
+
+div.newsletter {
+    padding-right: 100px;
+}
+
+div.newsletter p.text-1 {
+    font: 20px var(--font-style-2);
+    color: #ACABAA;
+}
+
+div.newsletter p.text-2 {
+    font: 14px var(--font-style-1);
+    color: #ACABAA;
+}
+
+div.newsletter input {
+    border: 2px solid #ACABAA;
+    border-width: 2px;
+    color: #ACABAA;
+    background-color: black;
+    padding: 16px;
+    font-size: 20px;
+}
+
+input:focus {
+    border-color: white;
+    background-color: black;
+    border-radius: 0;
+}
+
+div.follow-us img {
+    padding: 14px;
+    background-color: #1f2020;
+    margin-right: 17px;
 }
