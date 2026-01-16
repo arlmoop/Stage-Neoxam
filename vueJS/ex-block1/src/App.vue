@@ -1,26 +1,18 @@
 
 <template>
-  <input v-model="firstName" placeholder="first name">
-  <input v-model="lastName" placeholder="last name">
+  <input v-model="login.email" placeholder="Email">
+  <input v-model="login.password" placeholder="Password">
 
-  <br>
-  <button>{{ fullName }}</button>
+  <p>Email : {{ login.email }} || Password : {{ login.password }}</p>
 </template>
 
 <script setup>
-  import { ref, computed } from 'vue'
+  import { ref, computed, reactive } from 'vue'
 
-  function sayHello() {
-    alert("HELLO !!")
-  }
-
-  const firstName = ref('')
-  const lastName = ref('')
-
-  const fullName = computed(() => {
-    return firstName.value + ' ' + lastName.value
+  const login = reactive({
+    email: "",
+    password: ""
   })
-
 </script>
 
 <style scoped>
