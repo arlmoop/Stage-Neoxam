@@ -1,24 +1,27 @@
-<script setup>
-  import { ref, reactive } from 'vue'
-
-  const name = ref('')
-
-  const user = {
-    firstName: "",
-    lastName: ""
-  }
-</script>
 
 <template>
-  <input v-model="name">
+  <input v-model="firstName" placeholder="first name">
+  <input v-model="lastName" placeholder="last name">
 
-  <p>Je m'appelle : {{ name }}</p>
-
-  <input v-model="user.firstName" placeholder="Prénom">
-  <input v-model="user.lastName" placeholder="Nom">
-
-  <p>Prénom : {{ user.firstName }} || Nom : {{ user.lastName }}</p>
+  <br>
+  <button>{{ fullName }}</button>
 </template>
+
+<script setup>
+  import { ref, computed } from 'vue'
+
+  function sayHello() {
+    alert("HELLO !!")
+  }
+
+  const firstName = ref('')
+  const lastName = ref('')
+
+  const fullName = computed(() => {
+    return firstName.value + ' ' + lastName.value
+  })
+
+</script>
 
 <style scoped>
 
