@@ -1,18 +1,9 @@
-
 <template>
-  <input v-model="login.email" placeholder="Email">
-  <input v-model="login.password" placeholder="Password">
-
-  <p>Email : {{ login.email }} || Password : {{ login.password }}</p>
+  <UserCard name="John" age="25"></UserCard>
 </template>
 
 <script setup>
-  import { ref, computed, reactive } from 'vue'
-
-  const login = reactive({
-    email: "",
-    password: ""
-  })
+  import UserCard from './UserCard.vue'
 </script>
 
 <style scoped>
