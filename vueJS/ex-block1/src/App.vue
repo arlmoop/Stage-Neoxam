@@ -1,19 +1,10 @@
 <template>
-  <p>Total : {{ total }}</p>
-  <CounterButton @increment="add"></CounterButton>
+  <Card>
+    <h2>Title</h2>
+    <p>Some description</p>
+  </Card>
 </template>
 
 <script setup>
-  import { ref } from 'vue'
-  import CounterButton from './CounterButton.vue'
-
-  const total = ref(0)
-
-  function add() {
-    total.value ++
-  }
+  import Card from './Card.vue'
 </script>
-
-<style scoped>
-
-</style>
