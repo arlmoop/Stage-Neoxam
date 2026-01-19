@@ -1,0 +1,23 @@
+<html lang="fr">
+  <head> </head>
+  <body>
+    <h1>Hello World !!</h1>
+    <h2>Suppression des li</h2>
+    <script>
+      const button = document.querySelector("h1");
+      button.addEventListener("click", () => {
+        button.textContent = "Clicked !";
+
+        const li = document.createElement("li");
+        li.textContent = "Ajout de l'element li";
+        document.body.appendChild(li);
+      });
+
+      const li_delete = document.querySelector("h2");
+      li_delete.addEventListener("click", () => {
+        const li = document.querySelector("li");
+        li.remove();
+      })
+    </script>
+  </body>
+</html>
