@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Tailwind</title>
-  <!-- Inclusion Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-  <button class="m-20 rounded-xl bg-blue-500 hover:bg-blue-400 active:scale-90 w-32 h-32 transition duration-300
-  disabled:bg-gray-400 ">Button</button>
-  <div class="bg-red-300 flex flex-col md:flex-row">
-    <p>1</p>
-    <p>2</p>
-    <p>3</p>
-    <p>4</p>
-    <p>5</p>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Tailwind</title>
+  </head>
+  <body class="font-display bg-background">
+    <header>
+      <h1 class="text-center text-5xl text-title">Mon Blog</h1>
+    </header>
+
+    <main class="bg-background2 my-10 mx-20">
+      <h2>Mon premier article :</h2>
+      <p>
+        Bienvenue sur mon blog ! Ceci est le premier article. Ici, je peux partager des idées, des tutoriels, ou des anecdotes.
+      </p>
+      <ul class="ml-10 mt-4">
+        <li>Point important 1</li>
+        <li>Point important 2</li>
+        <li>Point important 3</li>
+      </ul>
+      <p class="mt-10">
+        Fin de l’article. Merci de votre lecture !
+      </p>
+    </main>
+  </body>
+  <script type="module" src="/src/main.js"></script>
 </html>
