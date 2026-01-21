@@ -1,8 +1,11 @@
 <template>
-    <li :class="{ completed: done }">
+    <li class="bg-background_li lg:max-w-4xl md:max-w-3xl sm:max-w-2xl" :class="{ completed: done }">
         {{ props.mission }}
-        <input type="checkbox" :checked="done" @change="toggleDone">
-        <button @click="deleteTask()">Delete Task</button>
+
+        <input class="ml-4 " type="checkbox" :checked="done" @change="toggleDone">
+
+        <button class="bg-background_delete_button hover:bg-background_delete_button_hover 
+        border-2 border-black rounded-lg ml-2 px-3" @click="deleteTask()">Delete Task</button>
     </li>
 </template>
 
@@ -25,11 +28,9 @@
 
 <style scoped>
   li {
-    background-color: white;
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
-    max-width: 1000px;
   }
 
   li.completed {
