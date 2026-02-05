@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Test Tailwind</title>
-  </head>
-  <body class="font-display bg-background">
-    <header>
-      <h1 class="text-center text-5xl text-title">Mon Blog</h1>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue + Tailwind + DaisyUI</title>
 
-    <main class="bg-background2 my-10 mx-20">
-      <h2>Mon premier article :</h2>
-      <p>
-        Bienvenue sur mon blog ! Ceci est le premier article. Ici, je peux partager des idées, des tutoriels, ou des anecdotes.
-      </p>
-      <ul class="ml-10 mt-4">
-        <li>Point important 1</li>
-        <li>Point important 2</li>
-        <li>Point important 3</li>
-      </ul>
-      <p class="mt-10">
-        Fin de l’article. Merci de votre lecture !
-      </p>
-    </main>
-  </body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F54927',
+            title: '#F54927',
+            body: '#475AED',
+            background: '#DEEBFF',
+            background2: '#B8D3FC'
+          },
+          fontFamily: {
+            display: ['Lucida Console', 'Courier New', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" />
+</head>
+<body class="bg-background font-display">
+
+  <div id="app"></div>
+
   <script type="module" src="/src/main.js"></script>
+</body>
 </html>
