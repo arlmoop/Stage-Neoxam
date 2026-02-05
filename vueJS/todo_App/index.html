@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Ici, tu peux étendre les couleurs et fonts si tu veux
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F54927',
+            title: '#F54927',
+            body: '#475AED',
+            background: '#839CCC',
+            background_builder: '#89E540',
+            background_builder_hover: '#B7ED8C',
+            background_li: '#9BB6E8',
+            background_li_hover: '#B7ED8C',
+            background_delete_button: '#ABAFC4',
+            background_delete_button_hover: '#C9C1C1'
+          },
+          fontFamily: {
+            display: ['Lucida Console', 'Courier New', 'monospace'],
+            sans: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</html>

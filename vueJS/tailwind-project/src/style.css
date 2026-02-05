@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+    --color-title: #F54927;
+    --color-body: #475AED;
+    --color-background: #DEEBFF;
+    --color-background2: #B8D3FC;
+
+    --font-display: "Lucida Console", "Courier New", monospace;
+}
