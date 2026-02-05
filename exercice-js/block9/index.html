@@ -1,0 +1,13 @@
+<html lang="fr">
+  <head> </head>
+  <body>
+    <button id="load_module">Charger le module</button>
+    <script type="module" src="main.js">
+      const button = document.querySelector("#load_module") 
+      
+      button.addEventListener("click", () => {
+        import { charge_dynamique } from "./main.js"
+      })
+    </script>
+  </body>
+</html>
