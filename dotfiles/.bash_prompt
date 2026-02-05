@@ -1,0 +1,77 @@
+#!/bin/bash
+# Display user & path
+# Display hostname if connected through SSH or root
+# Display current git info (branch, +-modified files, num of ahead/behind commit with remote) [TODO]
+# Display last command status: ✓ or ✗
+# Display last command execution time
+
+reset="\e[0m"
+red="\e[31m"
+green="\e[32m"
+yellow="\e[33m"
+blue="\e[34m"
+purple="\e[35m"
+cyan="\e[36m"
+
+prompt_git() {
+  branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null)
+  if [[ $branch ]]
+  then
+    [[ $branch == "HEAD" ]] && branch=$(git rev-parse --short HEAD 2> /dev/null || echo "main")
+    upstream=$(git rev-parse --symbolic-full-name --abbrev-ref @{upstream} 2> /dev/null)
+    changes=$(timeout 0.1 sh -c "git status --porcelain 2> /dev/null | wc -l" || echo ?)
+    stash=$(git stash list 2> /dev/null | wc -l)
+    diff=$(git log --pretty=oneline --topo-order --left-right $branch...$upstream 2> /dev/null)
+    ahead=$(grep -c "^<" <<< "$diff")
+    behind=$(grep -c "^>" <<< "$diff")
+    output=""
+    [[ $branch ]] && output+=" on $blue$branch"
+    output+=$cyan
+    [[ $ahead -ne 0 ]] && output+=" ↑"
+    [[ $behind -ne 0 ]] && output+=" ↓"
+    [[ $changes != "0" ]] && output+=" ${changes}≠"
+    [[ $stash -ne 0 ]] && output+=" ${stash}⚑"
+    output+=$reset
+    echo -e $output
+  fi
+}
+
+HISTSIZE=
+HISTFILESIZE=
+HISTCONTROL=ignoredups:erasedups
+shopt -s histappend
+timer() {
+  millisec=$(date +%s%3N)
+  [[ -z $1 ]] && echo $millisec && return
+  diff=$((millisec - $1))
+  [[ $diff -lt 1000 ]] && echo ${diff}ms && return
+  [[ $diff -lt 60000 ]] && echo $((diff / 1000))s && return
+  [[ $diff -lt 3600000 ]] && echo $((diff / 60000))m$((diff / 1000 % 60))s && return
+  echo $((diff / 3600000))h$((diff / 60000 % 60))m && return
+}
+pre_timer() {
+  c2=$c1;c1=$BASH_COMMAND
+  [[ -z $flag_time ]] && return
+  unset flag_time
+  history -a
+  history -c
+  history -r
+  start_time=$(timer)
+}
+post_timer() {
+  (($?)) && status="${red}✗$reset" || status="${green}✓$reset"
+  duration=" in $yellow$(timer $start_time)$reset at $yellow$(date +%T)$reset"
+  [[ $start_time && $c2 != "clear" ]] && echo -e "$status$duration\n"
+  flag_time=1
+  _z --add "$(command pwd $_Z_RESOLVE_SYMLINKS 2>/dev/null)" 2>/dev/null
+}
+_Z_NO_PROMPT_COMMAND=1
+trap pre_timer DEBUG
+PROMPT_COMMAND=post_timer
+
+PS1=""
+[[ $USER == "root" || $SSH_TTY ]] && PS1+="$red\h$reset | "
+[[ "$(uname -m)" != "$(arch)" ]] && PS1+="$purple$(arch)$reset | "
+PS1+="$yellow\u$reset"
+PS1+=" in $green\w$reset"
+PS1+=" \$(prompt_git)\n$ "
